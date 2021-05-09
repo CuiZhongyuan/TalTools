@@ -10,5 +10,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class TestApplication {
     @Test
     public void contextLoads() {
+        System.out.println("自测");
     }
 }
