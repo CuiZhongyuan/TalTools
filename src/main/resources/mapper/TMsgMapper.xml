@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.taltools.dao.TMsgDao">
+    <select id="findById" resultType="com.taltools.entity.TMsgEntity">
+        SELECT id,message from t_msg where id = #{id}
+    </select>
+
+    <select id="findByMessage" resultType="com.taltools.entity.TMsgEntity">
+        SELECT id,message from t_msg WHERE Message = #{Message}
+    </select>
+
+    <select id="findTMsgAll" resultType="com.taltools.entity.TMsgEntity">
+        SELECT  * from t_msg
+    </select>
+
+</mapper>
