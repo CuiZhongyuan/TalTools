@@ -1,14 +1,17 @@
 package com.taltools.service;
 
 import com.github.pagehelper.PageInfo;
-import com.taltools.entity.UserDomain;
+import com.taltools.entity.UserEntity;
+import org.springframework.stereotype.Service;
 
 /**
- * Created by Administrator on 2018/4/19.
+ * @author czy
  */
+@Service
 public interface UserService {
 
-    int addUser(UserDomain user);
+    int addUser(UserEntity user);
 
-    PageInfo<UserDomain> findAllUser(int pageNum, int pageSize);
+    PageInfo<UserEntity> findAllUser(int pageNum, int pageSize);
+
 }

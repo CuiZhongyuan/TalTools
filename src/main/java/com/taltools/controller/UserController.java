@@ -1,15 +1,14 @@
 package com.taltools.controller;
 
-import com.taltools.entity.UserDomain;
+import com.taltools.entity.UserEntity;
 import com.taltools.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 /**
  * @author czy
  */
-@Controller
+@RestController
 @RequestMapping(value = "/user")
 public class UserController {
 
@@ -18,7 +17,7 @@ public class UserController {
 
     @ResponseBody
     @PostMapping("/add")
-    public int addUser(UserDomain user){
+    public int addUser(UserEntity user){
         return userService.addUser(user);
     }
 
@@ -31,4 +30,7 @@ public class UserController {
                     int pageSize){
         return userService.findAllUser(pageNum,pageSize);
     }
+
+
+
 }

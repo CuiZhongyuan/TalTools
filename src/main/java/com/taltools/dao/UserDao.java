@@ -1,12 +1,12 @@
 package com.taltools.dao;
 
-import com.taltools.entity.UserDomain;
+import com.taltools.entity.UserEntity;
 
 import java.util.List;
 
 public interface UserDao {
 
-    int insert(UserDomain record);
+    int insert(UserEntity record);
 
-    List<UserDomain> selectUsers();
+    List<UserEntity> selectUsers();
 }

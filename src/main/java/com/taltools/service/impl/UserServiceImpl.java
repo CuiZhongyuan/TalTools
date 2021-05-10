@@ -3,7 +3,7 @@ package com.taltools.service.impl;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.taltools.dao.UserDao;
-import com.taltools.entity.UserDomain;
+import com.taltools.entity.UserEntity;
 import com.taltools.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,14 +14,14 @@ import java.util.List;
  * @author czy
  */
 @SuppressWarnings("ALL")
-@Service(value = "userService")
+@Service
 public class UserServiceImpl implements UserService {
 
     @Autowired
-    private UserDao userDao;//这里会报错，但是并不会影响
+    private UserDao userDao;
 
     @Override
-    public int addUser(UserDomain user) {
+    public int addUser(UserEntity user) {
 
         return userDao.insert(user);
     }
@@ -33,11 +33,12 @@ public class UserServiceImpl implements UserService {
     * pageSize 每页显示的数据条数
     * */
     @Override
-    public PageInfo<UserDomain> findAllUser(int pageNum, int pageSize) {
+    public PageInfo<UserEntity> findAllUser(int pageNum, int pageSize) {
         //将参数传给这个方法就可以实现物理分页了，非常简单。
         PageHelper.startPage(pageNum, pageSize);
-        List<UserDomain> userDomains = userDao.selectUsers();
+        List<UserEntity> userDomains = userDao.selectUsers();
         PageInfo result = new PageInfo(userDomains);
         return result;
     }
+
 }
