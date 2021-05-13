@@ -11,19 +11,19 @@ import java.util.List;
 public class TMsgServiceImpl implements TMsgService {
 
     @Autowired
-    private TMsgDao tMsgMapper;
+    private TMsgDao tMsgDao;
     @Override
     public TMsgEntity findById(Integer id) {
-        return tMsgMapper.findById(id);
+        return tMsgDao.findById(id);
     }
 
     @Override
     public TMsgEntity findByMessage(String message) {
-        return tMsgMapper.findByMessage(message);
+        return tMsgDao.findByMessage(message);
     }
 
     @Override
     public List<TMsgEntity> findTMessageAll() {
-        return tMsgMapper.findTMsgAll();
+        return tMsgDao.findTMsgAll();
     }
 }
