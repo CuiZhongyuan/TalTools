@@ -7,7 +7,12 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+
+@SuppressWarnings("ALL")
 @Repository
 public interface AppraiseResultDao {
-    List<AppraiseResultEntity> getResult(String wo_number);
+    int getType(String wo_number);
+    List<String> getStuCode(String stu_code);
+    List<AppraiseResultEntity> getAll(String wo_number);
+    String deleteStuCode(String stu_code);
 }

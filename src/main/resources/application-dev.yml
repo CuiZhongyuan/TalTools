@@ -13,10 +13,12 @@ spring:
           filters: stat
           driver-class-name: com.mysql.cj.jdbc.Driver
           #基本属性
-#          url: jdbc:mysql://127.0.0.1:3306/mytest?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
-          url: jdbc:mysql://rm-2ze83s52f2ekt46mi.mysql.rds.aliyuncs.com:3306/call-center?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
-          username: callcenter_rw
-          password: callcenter_RW
+          url: jdbc:mysql://127.0.0.1:3306/mytest?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+          username: root
+          password: root
+#          url: jdbc:mysql://rm-2ze83s52f2ekt46mi.mysql.rds.aliyuncs.com:3306/call-center?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+#          username: callcenter_rw
+#          password: callcenter_RW
           #配置初始化大小/最小/最大
           initial-size: 1
           min-idle: 1

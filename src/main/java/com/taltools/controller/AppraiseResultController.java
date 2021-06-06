@@ -1,27 +1,33 @@
 package com.taltools.controller;
 
-import com.taltools.entity.AppraiseResultEntity;
 import com.taltools.service.AppraiseResultService;
+import com.taltools.util.JsonUtils;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author czy
  */
-@SuppressWarnings("ALL")
 @RestController
 @RequestMapping(value = "/api")
 public class AppraiseResultController {
 
     @Autowired
     private AppraiseResultService appraiseResultService;
-    @GetMapping("/getAppraise")
-    public List<AppraiseResultEntity> getResult(@Param("wo_number") String wo_number){
-        return appraiseResultService.getRsult(wo_number);
+    /**
+     * @param wo_number 工单号
+     * */
+    @GetMapping("/getAll")
+    public String getAll(@Param("wo_number") String wo_number){
+        return appraiseResultService.getAll(wo_number);
     }
+    /**
+     * @param reqJson 入参参数
+     */
+    @PostMapping("/deleteAppraiseLogStuCode")
+    public String deleteStuCode(@RequestBody String reqJson){
+        return appraiseResultService.appraiseLog(reqJson);
+    }
+
 }

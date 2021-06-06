@@ -15,7 +15,6 @@ import java.util.List;
 /**
  * @author czy
  */
-@SuppressWarnings("ALL")
 @RestController
 @RequestMapping(value = "/api")
 public class WorkOrderController {

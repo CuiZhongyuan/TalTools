@@ -4,8 +4,11 @@ import com.taltools.entity.AppraiseResultEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 
 @Service
 public interface AppraiseResultService {
-    List<AppraiseResultEntity> getRsult(String wo_number);
+    String getAll(String wo_number);
+
+    String appraiseLog(String reqJson);
 }

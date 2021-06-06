@@ -1,4 +1,4 @@
-package com.taltools.utils;
+package com.taltools.util;
 
 import org.springframework.context.ApplicationContext;
 
