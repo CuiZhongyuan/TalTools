@@ -20,6 +20,7 @@
     </properties>
 
     <dependencies>
+        <!--引入thymeleaf配合semantic-ui前端框架使用-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
