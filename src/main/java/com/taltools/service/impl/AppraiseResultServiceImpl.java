@@ -66,7 +66,7 @@ public class AppraiseResultServiceImpl implements AppraiseResultService {
                 respMap.put("code","000000");
 //                respMap.put("data",appraiseResultDao.getStuCode(stu_code));
                 appraiseResultDao.deleteStuCode(stu_code);
-                System.out.println(appraiseResultDao.deleteStuCode(stu_code));
+                System.out.println("执行成功");
             }else {
                 return "学员编号不能为空";
             }
