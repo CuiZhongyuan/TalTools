@@ -13,4 +13,5 @@ public class UserEntity  implements Serializable {
     private Integer id;
     private String name;
     private String pwd;
+    private String remark;
 }
