@@ -7,3 +7,4 @@
 - springMVC：thymeleaf
 
 - 接口的聚合结果查询
+- 增加多数据源配置
